@@ -15,7 +15,6 @@ axios.get("https://arstechnica.com/gadgets/").then(response => {
       .text()
       .split("   ")[0];
 
-    //add colors
     console.log(header.yellow);
     console.log(link.cyan);
     console.log("---------------------------\n");
