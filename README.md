@@ -33,3 +33,9 @@ git clone https://github.com/TS22082/arstechnica-scrape.git
 ```
 npm install
 ```
+
+- run the program
+
+```
+node start
+```
