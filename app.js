@@ -8,8 +8,8 @@ const { showData } = require("./utitlities");
     const $ = cheerio.load(data);
 
     $("li.article").each((i, element) => {
-      const link = $(element).find("a.overlay").attr("href");
       const header = $(element).find("a").text().split("   ")[0];
+      const link = $(element).find("a.overlay").attr("href");
 
       showData(header, link);
     });
