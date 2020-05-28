@@ -1,6 +1,6 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
-const colors = require("colors");
+const { showData } = require("./utitlities");
 
 (async function () {
   try {
@@ -11,9 +11,7 @@ const colors = require("colors");
       const link = $(element).find("a.overlay").attr("href");
       const header = $(element).find("a").text().split("   ")[0];
 
-      console.log(header.yellow);
-      console.log(link.cyan);
-      console.log("---------------------------\n");
+      showData(header, link);
     });
   } catch (err) {
     console.log({ error: err });
