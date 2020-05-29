@@ -8,8 +8,6 @@ const { findBySubject, askToSearch } = require("./menus");
   while (running) {
     try {
       const selection = await findBySubject();
-      console.log(selection);
-
       const { data } = await axios.get(`https://arstechnica.com/${selection}/`);
       const $ = cheerio.load(data);
 
