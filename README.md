@@ -1,6 +1,6 @@
 # ARS Technica Scrape
 
-A cli tool to get the most recent headlines and links to arstechnica gadget articles .
+A cli tool to view articles on arstechnica. User can select a category to search view articles from.
 
 # Motivation
 
