@@ -15,6 +15,7 @@ Is working
 - Node
 - Cheerio
 - Axios
+- Inquirer
 
 # Requirements
 
