@@ -38,5 +38,5 @@ npm install
 - run the program
 
 ```
-node start
+node app.js
 ```
