@@ -11,14 +11,13 @@ const { findBySubject, askToSearch } = require("./menus");
       const { data } = await axios.get(`https://arstechnica.com/${selection}/`);
       const $ = cheerio.load(data);
 
-      $("li.article").each(async (i, element) => {
+      $("li.article").each((i, element) => {
         const header = $(element).find("a").text().split("   ")[0];
         const link = $(element).find("a.overlay").attr("href");
         showData(header, link);
       });
 
-      const searchAgain = await askToSearch();
-      if (!searchAgain) running = false;
+      running = await askToSearch();
     } catch (err) {
       console.log({ error: err });
     }

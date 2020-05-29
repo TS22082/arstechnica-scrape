@@ -21,7 +21,7 @@ const findBySubject = async () => {
 const askToSearch = async () => {
   return new Promise(async (resolve, reject) => {
     try {
-      const userResponse = await inquirer.prompt({
+      const { userResponse } = await inquirer.prompt({
         type: "list",
         message: "Would you like to make another search?",
         choices: ["Yes", "No"],
