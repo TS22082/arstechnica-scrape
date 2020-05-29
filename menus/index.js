@@ -18,4 +18,20 @@ const findBySubject = async () => {
   });
 };
 
-module.exports = { findBySubject };
+const askToSearch = async () => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const userResponse = await inquirer.prompt({
+        type: "list",
+        message: "Would you like to make another search?",
+        choices: ["Yes", "No"],
+        name: "userResponse",
+      });
+      userResponse === "Yes" ? resolve(true) : resolve(false);
+    } catch (err) {
+      reject(err);
+    }
+  });
+};
+
+module.exports = { findBySubject, askToSearch };
